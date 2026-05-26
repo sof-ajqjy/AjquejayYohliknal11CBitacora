@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yohlik'nal Ajquejay</title>
- <link rel="icon" type="image/png" href="Recursos/img/LogoC.png">
+<link rel="icon" type="image/png" href="Recursos/img/LogoC.png">
     <style>
         /*CSS, este si es un lemguaje de programación, Diseñar en cascada*/
         html, body{
@@ -44,12 +44,12 @@
         }
         h1 {
             color: #fff; /* Color de la letra blanco para que resalte el neón */
-            text-shadow: 
+            text-shadow:
              0 0 5px #bc13fe,   /* Brillo pequeño y denso */
             0 0 10px #bc13fe,  /* Brillo medio */
             0 0 20px #bc13fe,  /* Brillo extendido */
             0 0 40px #bc13fe;  /* Resplandor de fondo */
-    
+
     /* Opcional: una fuente más gruesa ayuda al efecto */
             font-weight: bold;
             text-transform: uppercase;
@@ -83,7 +83,43 @@
     border-color: #bc13fe;        /* El borde se vuelve morado como tu título */
 }
 
+.pdf-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Para que el PDF respete los bordes redondeados */
+    margin-top: 15px;
+}
+
+/* Ajuste opcional para móviles */
+@media (max-width: 600px) {
+    embed {
+        height: 300px; /* Reducimos la altura en pantallas pequeñas */
+    }
+}
+
+.contenedor-foto {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra la imagen si es pequeña */
+    margin-top: 15px;
+}
+
+.img-bitacora {
+    max-width: 100%; /* Evita que la imagen se salga de la tarjeta */
+    height: auto;    /* Mantiene la proporción original */
+    border-radius: 10px; /* Bordes redondeados para que combine con la tarjeta */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Una pequeña sombra */
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto opcional: que la imagen crezca un poquito al pasar el mouse */
+.img-bitacora:hover {
+    transform: scale(1.02);
+}
+
     </style>
+
 </head>
 
 <body>
@@ -98,19 +134,51 @@
 
     <main>
         <h2>Contenido de la página web</h2>
-    </main>
 
     <h2>Bitácora de Actividades</h2>
 
+    <div class="semana">
+            <h3>Semana 1: Introducción a Arduino</h3>
+            <p>En esta semana realizamos una pequeña investigación sobre Arduino y sus componentes</p>
+   
+            <div class="pdf-container">
+            <embed src="Recursos/pdf/Introducción Arduino Yohlik.pdf" type="application/pdf" width="100%" height="500px" />
+    </div>
+   
+    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+        ¿No puedes ver el archivo? <a href="Recursos/pdf/Introducción Arduino Yohlik.pdf" target="_blank">Haz clic aquí para descargarlo.</a>
+    </p>
+</div>
+
         <div class="semana">
-            <h3>Semana 1: Creación de página web</h3>
-            <p>En esta semana aprendimos a utilizar visual code e iniciamos la programación de nuestra página web.</p>
+            <h3>Semana 2: Creación del Index</h3>
+            <p>En esta semana aprendimos a utilizar visual code e iniciamos la programación del encabezado.</p>
         </div>
 
         <div class="semana">
-            <h3>Semana 2: Personalizar página web</h3>
+            <h3>Semana 3: Creación de página web</h3>
+            <p>En esta semana seguimos utilizando visual code e iniciamos la programación de nuestra página web.</p>
+        </div>
+
+
+        <div class="semana">
+            <h3>Semana 4: Personalizar página web</h3>
             <p>Personalizamos nuestra página web de mejor manera, agregando los colores que deseamos, tamaño y configuraciones necesarias.</p>
         </div>
+
+        <div class="semana">
+            <h3>Semana 5: Registro Fotográfico</h3>
+            <p>Aquí puedes ver una captura de los avances realizados en el diseño de la interfaz:</p>
+   
+            <div class="contenedor-foto">
+            <img src="Recursos/img/LogoC.png" alt="Avance de la página web" class="img-bitacora">
+    </div>
+
+    <p style="margin-top: 10px; font-style: italic; color: #888; font-size: 0.85em;">
+        Pie de foto: Descripción breve de lo que se observa en la imagen.
+    </p>
+</div>
+
     </main>
 
 
